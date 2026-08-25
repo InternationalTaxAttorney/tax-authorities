@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# temporary file
+results.txt
+
+# omit the text files
+text_files/
+
+# omit parquet files; these come from Hugging Face
+*.parquet

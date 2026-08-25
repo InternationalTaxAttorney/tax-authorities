@@ -1,0 +1,30 @@
+[project]
+name = "tax-authorities"
+version = "0.1.0"
+description = "A simple GUI to search Tax Court opinions, revenue rulings, and private letter rulings using regex or regular text."
+readme = "README.md"
+authors = [
+    { name = "Andrew", email = "andrew@andrewmitchel.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "freesimplegui>=5.2.0.post1",
+    "huggingface-hub>=1.16.1",
+    "pandas>=2.3.3",
+    "platformdirs>=4.9.6",
+    "pyarrow>=24.0.0",
+]
+
+[project.scripts]
+tax-auth = "tax_authorities.main:main"
+tax-authorities = "tax_authorities.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "ruff>=0.15.13",
+]
