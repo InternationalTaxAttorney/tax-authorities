@@ -1,6 +1,6 @@
 [project]
 name = "tax-authorities"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple GUI to search Tax Court opinions, revenue rulings, and private letter rulings using regex or regular text."
 readme = "README.md"
 authors = [
