@@ -35,7 +35,8 @@ def get_output_dir():
 
 def show_download_popup():
     layout = [[sg.Text('Downloading tax law data. This happens once and may take a few minutes...')]]
-    window = sg.Window('Please wait', layout, finalize=True)
+    window = sg.Window('Please wait', layout, keep_on_top=True, finalize=True)
+    window.force_focus()
     window.read(timeout=0)
     return window
 
@@ -360,7 +361,6 @@ def main():
                 values['include_rev_ruls'],
                 values['include_plrs'],
             )
-            break
 
         if event in ('Search', '\r') and values['regex_pattern']:
             regex_search(
@@ -374,7 +374,6 @@ def main():
                 values['include_rev_ruls'],
                 values['include_plrs'],
             )
-            break
 
     window.close()
 
